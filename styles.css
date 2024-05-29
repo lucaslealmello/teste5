@@ -1,0 +1,79 @@
+body {
+    background-image: linear-gradient(45deg, #2d1dd6, #d4e0d9); /* Verde claro a verde escuro */
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #3498db, #211c09); /* Azul a amarelo */
+    border-image-slice: 1;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    color: #010a02; /* Amarelo */
+}
+
+h2, h3 {
+    color: #ffffff; /* Branco */
+    margin: 20px 0;
+}
+
+.materias {
+    margin: 20px 0;
+}
+
+.materias button {
+    background-color: #420fb1; /* Azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: auto; /* Permite que os botões tenham tamanho adequado */
+    transition: background-color 0.3s;
+}
+
+.materias button:hover {
+    background-color: #acc7d6; /* Azul escuro */
+}
+
+a {
+    text-decoration: none;
+}
+
+.opcoes {
+    margin: 10px auto; /* Adiciona um espaçamento vertical */
+    display: grid; /* Usa um layout de grade */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colunas de tamanho variável */
+    gap: 5px; /* Espaçamento entre os itens */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.opcoes button {
+    background-color: #a6a7a2; /* Amarelo */
+    color: #333; /* Texto escuro */
+    border: none;
+    display: flex; /* Para colocar os botões em uma única fileira */
+    justify-content: center; 
+    max-width: 900px; 
+    margin: 0 auto; 
+    border: 1px solid #677d8b; /* Azul */
+    padding: 5px 20px;
+    margin: 16px auto 0; 
+    font-size: 16px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.opcoes button:hover {
+    background-color: #f39c12; /* Amarelo escuro */
+}

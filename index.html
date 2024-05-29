@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pré CEFET</h1>
+    </header>
+    <h2>Opções de Matérias:</h2>
+    <div class="materias">
+        <button onclick="mostrarOpcoes('matematica')">Matemática</button>
+        <button onclick="mostrarOpcoes('portugues')">Português</button>
+        <button onclick="mostrarOpcoes('ciencias')">Ciências</button>
+        <button onclick="mostrarOpcoes('geografia')">Geografia</button>
+    </div>
+    <div id="opcoes-matematica" class="opcoes" style="display: none;">
+        <h3>Matemática:</h3>
+        <a href="algebra.html"><button>Álgebra</button></a>
+        <a href="geometria.html"><button>Geometria</button></a>
+        <a href="trigonometria.html"><button>Trigonometria</button></a>
+        <a href="calculo.html"><button>Cálculo</button></a>
+        <a href="estatistica.html"><button>Estatística</button></a>
+        <a href="probabilidade.html"><button>Probabilidade</button></a>
+        <a href="logica.html"><button>Lógica</button></a>
+    </div>
+    <div id="opcoes-portugues" class="opcoes" style="display: none;">
+        <h3>Português:</h3>
+        <a href="gramatica.html"><button>Gramática</button></a>
+        <a href="literatura.html"><button>Literatura</button></a>
+        <a href="redacao.html"><button>Redação</button></a>
+        <a href="interpretacao.html"><button>Interpretação de Texto</button></a>
+        <a href="producao-textual.html"><button>Produção Textual</button></a>
+        <a href="poesia.html"><button>Poesia</button></a>
+        <a href="linguistica.html"><button>Linguística</button></a>
+    </div>
+    <div id="opcoes-ciencias" class="opcoes" style="display: none;">
+        <h3>Ciências:</h3>
+        <a href="biologia.html"><button>Biologia</button></a>
+        <a href="fisica.html"><button>Física</button></a>
+        <a href="quimica.html"><button>Química</button></a>
+        <a href="astronomia.html"><button>Astronomia</button></a>
+        <a href="geologia.html"><button>Geologia</button></a>
+        <a href="botanica.html"><button>Botânica</button></a>
+        <a href="zoologia.html"><button>Zoologia</button></a>
+    </div>
+    <div id="opcoes-geografia" class="opcoes" style="display: none;">
+        <h3>Geografia:</h3>
+        <a href="geografia-fisica.html"><button>Geografia Física</button></a>
+        <a href="geografia-humana.html"><button>Geografia Humana</button></a>
+        <a href="geografia-politica.html"><button>Geografia Política</button></a>
+        <a href="geografia-cultural.html"><button>Geografia Cultural</button></a>
+        <a href="geografia-economica.html"><button>Geografia Econômica</button></a>
+        <a href="geografia-urbana.html"><button>Geografia Urbana</button></a>
+        <a href="geografia-rural.html"><button>Geografia Rural</button></a>
+    </div>
+    <script>
+        function mostrarOpcoes(materia) {
+            // Esconder todas as opções
+            document.querySelectorAll('.opcoes').forEach(div => {
+                div.style.display = 'none';
+            });
+            // Mostrar as opções da matéria selecionada
+            document.getElementById('opcoes-' + materia).style.display = 'block';
+        }
+
+        // Seleciona todos os botões dentro das opções
+        const opcoesButtons = document.querySelectorAll('.opcoes button');
+
+        // Adiciona evento de mouseover para cada botão
+        opcoesButtons.forEach(button => {
+            button.addEventListener('mouseover', function() {
+                // Muda a cor de fundo para lightgray quando o mouse passa sobre o botão
+                this.style.backgroundColor = 'lightgray';
+            });
+
+            // Adiciona evento de mouseout para cada botão
+            button.addEventListener('mouseout', function() {
+                // Restaura a cor de fundo original quando o mouse sai do botão
+                this.style.backgroundColor = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
